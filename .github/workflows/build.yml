@@ -16,7 +16,7 @@ on:
 env:
   IMAGE_DESC: "Customized Fedora Atomic image based on Bazzite"
   IMAGE_KEYWORDS: "bootc,ublue,universal-blue"
-  IMAGE_LOGO_URL: "https://avatars.githubusercontent.com/u/120078124?s=200&v=4"  # Put your own image here for a fancy profile on https://artifacthub.io/!
+  IMAGE_LOGO_URL: "https://github.com/MayuCat/Vermilion/blob/9c7a9421df84fa3d62a3edbe5857834ee5240e08/vermilion.png"  # Put your own image here for a fancy profile on https://artifacthub.io/!
   IMAGE_NAME: "${{ github.event.repository.name }}"  # output image name, usually same as repo name
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}"  # do not edit
   DEFAULT_TAG: "latest"
