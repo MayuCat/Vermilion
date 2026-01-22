@@ -47,10 +47,6 @@ sed -i "s/enabled=.*/enabled=0/g" /etc/yum.repos.d/vscodium.repo
 dnf5 -y install --enablerepo=vscodium \
         codium
 
-
-### Uninstall Strawberry Flatpak
-flatpak uninstall org.strawberrymusicplayer.strawberry
-
 ### Enabling System Unit File's
 systemctl enable docker.socket
 systemctl enable podman.socket
