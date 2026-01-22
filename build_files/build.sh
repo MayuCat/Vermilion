@@ -3,9 +3,7 @@
 set -ouex pipefail
 
 ### Install basic packages
-dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
-sed -i "s/enabled=.*/enabled=0/g" /etc/yum.repos.d/terra-release.repo
-dnf5 -y install -- enablerepo=terra-release \
+dnf5 -y install -- enablerepo='terra' \
         discord \
         wireshark \
         strawberry
