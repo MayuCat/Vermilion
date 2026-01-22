@@ -3,8 +3,9 @@
 set -ouex pipefail
 
 ### Install basic packages
-# RPMfusion repos available
-dnf5 -y install \
+dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+sed -i "s/enabled=.*/enabled=0/g" /etc/yum.repos.d/terra-release.repo
+dnf5 -y install -- enablerepo=terra-release \
         discord \
         wireshark \
         strawberry
@@ -13,14 +14,13 @@ dnf5 -y install \
 ### Copr stuff
 # Wezterm
 dnf5 -y copr enable wezfurlong/wezterm-nightly
-dnf5 -y install wezterm
 dnf5 -y copr disable wezfurlong/wezterm-nightly
+dnf5 -y --enablerepo copr:copr.fedorainfracloud.org:wezfurlong:wezterm-nightly install wezterm
 
 # lazygit
 dnf5 -y copr enable dejan/lazygit
-dnf5 -y install lazygit
 dnf5 -y copr disable dejan/lazygit
-
+dnf5 -y --enablerepo copr:copr.fedorainfracloud.org:dejan:lazygit install lazygit
 
 ### Install Docker
 dnf config-manager addrepo --from-repofile=https://download.docker.com/linux/fedora/docker-ce.repo
