@@ -3,7 +3,7 @@
 set -ouex pipefail
 
 ### Install basic packages
-dnf5 -y install -- enablerepo='terra' \
+dnf5 -y install --enablerepo='terra' \
         discord \
         wireshark \
         strawberry
