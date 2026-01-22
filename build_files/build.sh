@@ -5,9 +5,9 @@ set -ouex pipefail
 ### Install basic packages
 # RPMfusion repos available
 dnf5 -y install \
-        Discord \
+        discord \
         wireshark \
-        strawberry \
+        strawberry
 
 
 ### Copr stuff
