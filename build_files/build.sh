@@ -6,7 +6,8 @@ set -ouex pipefail
 dnf5 -y install --enablerepo='terra' \
         discord \
         wireshark \
-        strawberry
+        strawberry \
+        libunity.x86_64
 
 
 ### Copr stuff
@@ -51,7 +52,12 @@ dnf5 -y install --enablerepo=vscodium \
 systemctl enable docker.socket
 systemctl enable podman.socket
 
-### Fancy (From Bizzite <3)
+### Bling
+dnf5 -y install fish
+dnf5 -y copr enable atim/starship
+dnf5 -y copr disable atim/starship
+dnf5 -y --enablerepo copr:copr.fedorainfracloud.org:atim:starship install starship
+# Fancy (From Bizzite <3)
 HOME_URL="https://github.com/mayucat/vermilion"
 echo "vermilion" | tee "/etc/hostname"
 
