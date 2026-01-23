@@ -14,10 +14,12 @@ A custom Fedora Atomic [bootc](https://github.com/bootc-dev/bootc) image based o
 
 # Features
 
-* Niri+DMS & KDE Desktops
 * All the usual Bazzite & uBlue stuff
+* Native Strawberry for album art to work via music-presence
 * Native Discord for game activity to work
-* Vivaldi Browser
+* Native VSCodium
+* Wezterm
+* Lazygit
 * Docker
 * ???
 
