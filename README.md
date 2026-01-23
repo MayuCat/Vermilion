@@ -27,6 +27,7 @@ A custom Fedora Atomic [bootc](https://github.com/bootc-dev/bootc) image based o
 # Acknowledgments & Inspirations
 
 * [Universal Blue](https://universal-blue.org) for their [image template](https://github.com/ublue-os/image-template) & all of the awesome things they're doing in this space.
-* [Bazzite](https://bazzite.gg) for the base of this image
-* [Zirconium](https://github.com/zirconium-dev/zirconium) for the inspiration to try this and making me fall in love with Niri.
+* [Bazzite](https://bazzite.gg) for the base of this image.
+* [Zirconium](https://github.com/zirconium-dev/zirconium) & [Tulip](https://github.com/tulilirockz) for the inspiration to try this.
+* [Bizzite](https://github.com/Matthias-adR/bizzite/) for some config stuff & tidbits in the repo that helped me.
 * [VeneOS](https://github.com/Venefilyn/veneos) & [AmyOS](https://github.com/astrovm/amyos) for readme inspiration/formatting and various tidbits in the repo's that helped me get things working.
