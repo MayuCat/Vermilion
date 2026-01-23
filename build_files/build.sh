@@ -50,3 +50,16 @@ dnf5 -y install --enablerepo=vscodium \
 ### Enabling System Unit File's
 systemctl enable docker.socket
 systemctl enable podman.socket
+
+### Fancy (From Bizzite <3)
+HOME_URL="https://github.com/mayucat/vermilion"
+echo "vermilion" | tee "/etc/hostname"
+
+sed -i -f - /usr/lib/os-release <<EOF
+s|^NAME=.*|NAME=\"Vermilion\"|
+s|^PRETTY_NAME=.*|PRETTY_NAME=\"Vermilion\"|
+s|^HOME_URL=.*|HOME_URL=\"${HOME_URL}\"|
+s|^CPE_NAME=\".*\"|CPE_NAME=\"cpe:/o:matthias-adr:bizzite\"|
+s|^DOCUMENTATION_URL=.*|DOCUMENTATION_URL=\"${HOME_URL}\"|
+s|^DEFAULT_HOSTNAME=.*|DEFAULT_HOSTNAME="vermilion"|
+EOF
