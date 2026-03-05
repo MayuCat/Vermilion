@@ -5,9 +5,7 @@ set -ouex pipefail
 ### Install basic packages
 dnf5 -y install --enablerepo='terra' \
         discord \
-        wireshark \
         strawberry \
-        libunity.x86_64
 
 
 ### Copr stuff
@@ -20,18 +18,6 @@ dnf5 -y --enablerepo copr:copr.fedorainfracloud.org:wezfurlong:wezterm-nightly i
 dnf5 -y copr enable dejan/lazygit
 dnf5 -y copr disable dejan/lazygit
 dnf5 -y --enablerepo copr:copr.fedorainfracloud.org:dejan:lazygit install lazygit
-
-### Install Docker
-dnf config-manager addrepo --from-repofile=https://download.docker.com/linux/fedora/docker-ce.repo
-sed -i "s/enabled=.*/enabled=0/g" /etc/yum.repos.d/docker-ce.repo
-dnf -y install --enablerepo=docker-ce-stable \
-    containerd.io \
-    docker-buildx-plugin \
-    docker-ce \
-    docker-ce-cli \
-    docker-compose-plugin \
-    docker-model-plugin
-
 
 ### Install VSCodium
 tee /etc/yum.repos.d/vscodium.repo << 'EOF'
@@ -48,15 +34,12 @@ sed -i "s/enabled=.*/enabled=0/g" /etc/yum.repos.d/vscodium.repo
 dnf5 -y install --enablerepo=vscodium \
         codium
 
-### Enabling System Unit File's
-systemctl enable docker.socket
-systemctl enable podman.socket
 
 ### Bling
-dnf5 -y install fish
 dnf5 -y copr enable atim/starship
 dnf5 -y copr disable atim/starship
 dnf5 -y --enablerepo copr:copr.fedorainfracloud.org:atim:starship install starship
+
 # Fancy (From Bizzite <3)
 HOME_URL="https://github.com/mayucat/vermilion"
 echo "vermilion" | tee "/etc/hostname"
