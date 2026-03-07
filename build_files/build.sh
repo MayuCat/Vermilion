@@ -6,7 +6,7 @@ set -ouex pipefail
 dnf5 -y install --enablerepo='terra' \
         discord \
         strawberry \
-
+        libunity.x86_64
 
 ### Copr stuff
 # Wezterm
