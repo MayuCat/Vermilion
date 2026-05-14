@@ -3,7 +3,6 @@
 set -ouex pipefail
 
 ### Install basic packages
-dnf -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 dnf5 -y install --enablerepo='terra' \
         strawberry \
         libunity.x86_64 \
