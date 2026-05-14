@@ -17,11 +17,11 @@ A custom Fedora Atomic [bootc](https://github.com/bootc-dev/bootc) image based o
 * All the usual Bazzite & uBlue stuff
 * Native Strawberry for album art to work via music-presence
 * Native Discord for game activity to work
-* Native VSCodium
+* Native QEMU readded
+* Native ROCm readded
 * Wezterm
 * Lazygit
-* Docker
-* ???
+* 
 
 
 # Acknowledgments & Inspirations
