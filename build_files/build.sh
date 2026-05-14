@@ -7,9 +7,8 @@ dnf5 -y install --enablerepo='terra' \
         discord.x86_64 \
         vencord-installer-discord-stable.x86_64 \
         strawberry \
-        libunity.x86_64 \
-        sunshine
-
+        libunity.x86_64 
+        
 ### Re-add QEMU because bazzite thought virtualization is only for dev work
 dnf5 -y install \
         libvirt \
