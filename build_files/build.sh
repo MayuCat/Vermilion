@@ -3,10 +3,13 @@
 set -ouex pipefail
 
 ### Install basic packages
+dnf -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 dnf5 -y install --enablerepo='terra' \
-        discord.x86_64 \
         strawberry \
-        libunity.x86_64 
+        libunity.x86_64 \
+        vesktop.x86_64
+
+dnf5 -y install discord --repo terra
 
 ### Re-add QEMU because bazzite thought virtualization is only for dev work
 dnf5 -y install \
