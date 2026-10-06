@@ -5,8 +5,8 @@ set -ouex pipefail
 ### Install basic packages
 dnf5 -y install --enablerepo='terra' \
         strawberry \
-        libunity.x86_64 \
-        vesktop.x86_64
+        libunity \
+        uxplay
 
 dnf5 -y install discord --repo terra
 
@@ -15,8 +15,7 @@ dnf5 -y install \
         rocm-hip \
         rocm-opencl\
         rocm-clinfo \
-        rocm-smi \
-        uxplay
+        rocm-smi
 
 ### Copr stuff
 # Wezterm
