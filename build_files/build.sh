@@ -10,25 +10,13 @@ dnf5 -y install --enablerepo='terra' \
 
 dnf5 -y install discord --repo terra
 
-### Re-add QEMU because bazzite thought virtualization is only for dev work
-dnf5 -y install \
-        libvirt \
-        qemu \
-        qemu-img \
-        guestfs-tools \
-        qemu-kvm
-
-### Re-add ROCM cuz lol see above
+### Re-add ROCM cuz lol bazzite moment
 dnf5 -y install \
         rocm-hip \
         rocm-opencl\
-        rocm-clinfo
-
-dnf5 -y --setopt=install_weak_deps=False install \
-        rocm-hip \
-        rocm-opencl \
         rocm-clinfo \
-        rocm-smi
+        rocm-smi \
+        uxplay
 
 ### Copr stuff
 # Wezterm
